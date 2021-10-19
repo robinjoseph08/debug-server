@@ -46,7 +46,7 @@ func main() {
 	http.HandleFunc("/", logMiddleware(root))
 	http.HandleFunc("/env", logMiddleware(env))
 	log("listening on %s", port)
-	_ = http.ListenAndServe(":" + port, nil)
+	_ = http.ListenAndServe("0.0.0.0:" + port, nil)
 }
 
 
